@@ -251,6 +251,9 @@ function fnShowLogin(stat) {
 					<input type="checkbox" name="checkId" class="check2" onclick="javascript:saveid(document.loginForm);" id="checkId">${title}
 				</li>
 				<li>
+					<spring:message code="comUatUia.idPw.webmaster"/><!-- id/password  -->
+				</li>
+				<li>
 					<input type="button" class="btn_login" value="<spring:message code="comUatUia.loginForm.login"/>" onclick="actionLogin()"> <!-- 로그인  -->
 				</li>
 				<li>
