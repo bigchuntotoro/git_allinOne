@@ -230,7 +230,6 @@ function fnShowLogin(stat) {
 				<li><a href="javascript:fnLoginTypeSelect('typeUsr');" id="typeUsr" title=""><spring:message code="comUatUia.loginForm.USR"/></a></li> <!-- 업무 -->
 			</ul>
 		</div>
-	
 		<div class="login_input">
 			<ul>
 				<!-- 아이디 -->
