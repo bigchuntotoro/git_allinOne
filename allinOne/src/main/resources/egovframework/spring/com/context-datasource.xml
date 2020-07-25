@@ -22,11 +22,15 @@
 	<beans profile="mysql">  
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${Globals.mysql.DriverClassName}"/>
-		<property name="url" value="${Globals.mysql.Url}" />
-		<property name="username" value="${Globals.mysql.UserName}"/>
+		<property name="url" value="#{egovEnvCryptoService.getUrl()}" />
+		<property name="username" value="#{egovEnvCryptoService.getUsername()}"/>
 		<!-- 암호화(Crypto) 관련 서비스 https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:fdl:crypto_simplify_v3_8 참조 -->
 		<property name="password" value="#{egovEnvCryptoService.getPassword()}"/>
-		<!-- <property name="password" value="${Globals.mysql.Password}"/> -->
+
+<!-- 		<property name="driverClassName" value="${Globals.mysql.DriverClassName}"/>
+		<property name="url" value="${Globals.mysql.Url}" />		
+		<property name="username" value="${Globals.mysql.UserName}"/>		
+		<property name="password" value="${Globals.mysql.Password}"/> -->
 	</bean>
 	</beans>
 	
